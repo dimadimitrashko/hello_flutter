@@ -7,14 +7,17 @@ class MyRowColumn extends StatelessWidget {
         appBar: AppBar(
           title: Text('Верстка теория'),
         ),
-        body: Container(
-          color: Colors.black12,
-          child: Row(
-            children: <Widget>[
-              ColorBox(),
-              ColorBox(),
-              BiggerColorBox(),
-            ],
+        body: Center(
+          child: Container(
+            color: Colors.black12,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                ColorBox(),
+                ColorBox(),
+                BiggerColorBox(),
+              ],
+            ),
           ),
         ));
   }
@@ -41,7 +44,7 @@ class BiggerColorBox extends StatelessWidget {
       width: 80,
       height: 100,
       decoration: BoxDecoration(
-        color: Colors.blue[400],
+        color: Colors.lightGreen[400],
         border: Border.all(),
       ),
     );

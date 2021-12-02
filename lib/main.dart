@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/my_container.dart';
 import 'package:hello_flutter/row_column.dart';
+import 'package:flutter/rendering.dart' show debugPaintPointersEnabled;
 
-void main() => runApp(MyApp());
+void main() {
+  debugPaintPointersEnabled = false;
+  return runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -9,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Quiz App',
       theme: ThemeData(primarySwatch: Colors.amber),
-      home: MyRowColumn(),
+      home: MyContainer(),
     );
   }
 }
