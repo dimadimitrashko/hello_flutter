@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart' show debugPaintPointersEnabled;
+import 'package:hello_flutter/pages/home_page.dart';
 
 void main() {
   debugPaintPointersEnabled = false;
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Quiz App',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: HomePages(),
+      home: HomePage(),
     );
   }
 }
