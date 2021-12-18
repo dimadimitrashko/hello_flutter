@@ -10,14 +10,26 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Container(
           height: MediaQuery.of(context).size.height - 85,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(35),
                 bottomRight: Radius.circular(35),
               )),
           child: ListView(
-            children: <Widget>[],
+            padding: const EdgeInsets.all(10.0),
+            children: const <Widget>[
+              ListTile(
+                title: Text('Освежающие напитки',
+                    style:
+                        TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                subtitle: Text(
+                  'Больше чем 100 видов наппитков',
+                  style: TextStyle(fontSize: 16),
+                ),
+                trailing: Icon(Icons.panorama_horizontal),
+              )
+            ],
           ),
         ),
       ),

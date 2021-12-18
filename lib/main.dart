@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import "package:google_fonts/google_fonts.dart";
+import 'package:hello_flutter/pages/home_page.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.marmeladTextTheme(
             Theme.of(context).textTheme,
           )),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
