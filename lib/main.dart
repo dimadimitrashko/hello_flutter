@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(ScreenWidget());
+void main() => runApp(const ScreenWidget());
 
 class ScreenWidget extends StatelessWidget {
   const ScreenWidget({Key? key}) : super(key: key);
+  debugShowChecedModeBaner: false;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('StatelessWidget'),
+          title: const Text('StatefullWidget'),
         ),
         body: SimpleWidget(),
       ),
@@ -18,11 +19,31 @@ class ScreenWidget extends StatelessWidget {
   }
 }
 
-class SimpleWidget extends StatelessWidget {
+class SimpleWidget extends StatefulWidget {
+  @override
+  _SimpleWidgetState createState() => _SimpleWidgetState();
+}
+
+class _SimpleWidgetState extends State<SimpleWidget> {
+  int count = 0;
+  void _handlButton() {
+    setState((){
+      _count++;
+    });
+  }
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child:
-            Center(child: Text('Мой текст', textDirection: TextDirection.ltr)));
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text('$count'),
+          RaisedButton(
+            onPressed: () {_handlButton();},
+            child: Text('Click me!',)
+          )
+        ],
+      ),
+    );
   }
 }
