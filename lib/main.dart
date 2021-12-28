@@ -23,27 +23,3 @@ class SimpleWidget extends StatefulWidget {
   @override
   _SimpleWidgetState createState() => _SimpleWidgetState();
 }
-
-class _SimpleWidgetState extends State<SimpleWidget> {
-  int count = 0;
-  void _handlButton() {
-    setState((){
-      _count++;
-    });
-  }
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text('$count'),
-          RaisedButton(
-            onPressed: () {_handlButton();},
-            child: Text('Click me!',)
-          )
-        ],
-      ),
-    );
-  }
-}
