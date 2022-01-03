@@ -1,10 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:hello_flutter/pages/home_page.dart';
 
-class Student extends StatelessWidget {
-  const Student({Key? key}) : super(key: key);
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      title: 'Demo App',
+      theme: ThemeData(
+        primarySwatch: Colors.amber,
+        backgroundColor: Colors.white,
+        textTheme: GoogleFonts.marmeladTextTheme(
+          Theme.of(context).textTheme,
+        ),
+      ),
+      home: const HomePage(),
+    );
   }
 }
