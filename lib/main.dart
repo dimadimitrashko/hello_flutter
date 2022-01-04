@@ -1,8 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:hello_flutter/pages/home_page.dart';
 
-void main() => runApp(const MyApp());
+import 'home_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -10,13 +9,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Demo App',
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.amber,
-        backgroundColor: Colors.white,
-        textTheme: GoogleFonts.marmeladTextTheme(
-          Theme.of(context).textTheme,
-        ),
+        primarySwatch: Colors.green
       ),
       home: const HomePage(),
     );
