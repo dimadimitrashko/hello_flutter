@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'main.dart';
-
-void main() => runApp(const MyApp());
+import 'colors.dart' as color;
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,8 +11,30 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.green,
+    return Scaffold(
+      backgroundColor: color.AppColor.colorDarkSecondary,
+      body: Container(
+        padding: const EdgeInsets.only(top: 70, left: 30),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                const Text(
+                  'Training'
+                  style: TextStyle(
+                    fontSize: 30,
+                    color: color.AppColor.colorStartedShadow,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const Icon(Icons.arrow_back_ios,)
+                size: 20
+                color:color.AppColor.color.AppColor.colorStarted,
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
