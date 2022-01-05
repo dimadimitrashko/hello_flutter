@@ -23,4 +23,5 @@ class AppColor {
 
   // Alert Dialog
   static const Color colorAlertDialogBack = Color(0xFFF8F7F2);
+  static const Color homePageIcons = Color(0xFF000000);
 }

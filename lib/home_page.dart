@@ -12,24 +12,33 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: color.AppColor.colorDarkSecondary,
+      backgroundColor: color.AppColor.colorLightCardColors,
       body: Container(
-        padding: const EdgeInsets.only(top: 70, left: 30),
+        padding: const EdgeInsets.only(top: 70, left: 30, right: 30),
         child: Column(
           children: [
             Row(
               children: [
                 const Text(
-                  'Training'
+                  'Training',
                   style: TextStyle(
                     fontSize: 30,
-                    color: color.AppColor.colorStartedShadow,
+                    color: color.AppColor.homePageIcons,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                const Icon(Icons.arrow_back_ios,)
-                size: 20
-                color:color.AppColor.color.AppColor.colorStarted,
+                Expanded(child: Container()),
+                const Icon(Icons.arrow_back_ios,
+                    size: 20,
+                    color:color.AppColor.homePageIcons,),
+                SizedBox(width: 10),
+                const Icon(Icons.calendar_today_outlined,
+                    size: 20,
+                    color: color.AppColor.homePageIcons),
+                SizedBox(width: 15),
+                const Icon(Icons.arrow_forward_ios,
+                  size: 20,
+                  color:color.AppColor.homePageIcons,),
               ],
             ),
           ],
