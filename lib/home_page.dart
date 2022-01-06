@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: [
                 const Text(
-                  'Training',
+                  'Тренеровка',
                   style: TextStyle(
                     fontSize: 30,
                     color: color.AppColor.homePageIcons,
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: [
                 const Text(
-                  'Your program',
+                  'Твоя программа',
                   style: TextStyle(
                     fontSize: 20,
                     color: color.AppColor.homePageSubtitle,
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Expanded(child: Container()),
                 const Text(
-                  'Details',
+                  'Детали',
                   style: TextStyle(
                     fontSize: 20,
                     color: color.AppColor.homePageDetail,
@@ -98,18 +98,18 @@ class _HomePageState extends State<HomePage> {
                   BoxShadow(
                     offset: Offset(5, 10),
                     blurRadius: 20,
-                    color: color
-                        .AppColor.gradientSecond, //.withOpacity(0.2),//??????????
+                    color: color.AppColor
+                        .gradientSecond, //.withOpacity(0.2),//??????????
                   ),
                 ],
               ),
               child: Container(
-                padding: const EdgeInsets.only(left: 20, top: 18),
+                padding: const EdgeInsets.only(left: 20, top: 18, right: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Text(
-                      'Next workout',
+                      'Следущая тренеровка',
                       style: TextStyle(
                         fontSize: 15,
                         color: color.AppColor.homePageContainerTextSmall,
@@ -130,37 +130,72 @@ class _HomePageState extends State<HomePage> {
                         color: color.AppColor.homePageContainerTextSmall,
                       ),
                     ),
+                    SizedBox(height: 25),
+                    // Row(
+                    //   crossAxisAlignment: CrossAxisAlignment.end,
+                    //   children: [
+                    //     Row(
+                    //       children: const [
+                    //         Icon(
+                    //           Icons.timer,
+                    //           size: 20,
+                    //           color: color.AppColor.homePageContainerTextSmall,
+                    //         ),
+                    //         SizedBox(width: 10),
+                    //         Text(
+                    //           '60 мин',
+                    //           style: TextStyle(
+                    //             fontSize: 13,
+                    //             color:
+                    //             color.AppColor.homePageContainerTextSmall,
+                    //           ),
+                    //         ),
+                    //       ],
+                    //     ),
+                    //     Expanded(child: Container()),
+                    //     Container(
+                    //       decoration: BoxDecoration(
+                    //         borderRadius: BorderRadius.circular(60),
+                    //         boxShadow: const [
+                    //           BoxShadow(
+                    //             color: color.AppColor.gradientFirst,
+                    //             blurRadius: 10,
+                    //             offset: Offset(4,8),
+                    //           ),
+                    //         ],
+                    //       ),
+                    //       child: const Icon(
+                    //         Icons.play_circle_fill,
+                    //         color: Colors.white,
+                    //         size: 60,
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
                   ],
                 ),
               ),
             ),
-            Row(
-              children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: const [
-                    Icon(
-                      Icons.timer,
-                      size: 20,
-                      color: color.AppColor.homePageContainerTextSmall,
+            const SizedBox(width: 10,),
+            Container(
+              height: 180,
+              width: MediaQuery.of(context).size.width,
+              child: Stack(
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 120,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      image: const DecorationImage(
+                        image: AssetImage(
+                          "assets/marguerite.jpg"
+                        )
+                      )
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      '60 мин',
-                      style: TextStyle(
-                        fontSize: 13,
-                      ),
-                    ),
-                    Icon(
-                      Icons.play_circle_fill,
-                      color: Colors.white,
-                      size: 60,
-                    ),
-                  ],
-                ),
-              ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
