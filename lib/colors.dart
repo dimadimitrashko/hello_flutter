@@ -21,7 +21,11 @@ class AppColor {
   static const Color colorStartedShadow = Color(0x60274C71);
 
 
-  // Alert Dialog
-  static const Color colorAlertDialogBack = Color(0xFFF8F7F2);
+  // my colors
   static const Color homePageIcons = Color(0xFF000000);
+  static const Color homePageSubtitle = Color(0xFF3B3737);
+  static const Color homePageDetail = Color(0xFF4B5F9A);
+  static const Color gradientFirst = Color(0xFF4660E3);
+  static const Color gradientSecond = Color(0xFF8696CD);
+  static const Color homePageContainerTextSmall = Color(0xFFE5E5E5);
 }
