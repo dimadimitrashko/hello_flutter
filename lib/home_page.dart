@@ -176,6 +176,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+
             const SizedBox(width: 10,),
             Container(
               height: 180,
@@ -189,9 +190,9 @@ class _HomePageState extends State<HomePage> {
                       borderRadius: BorderRadius.circular(20),
                       image: const DecorationImage(
                         image: AssetImage(
-                          "assets/marguerite.jpg"
-                        )
-                      )
+                          "assets/card.jpg"
+                        ),
+                      ),
                     ),
                   ),
                 ],
