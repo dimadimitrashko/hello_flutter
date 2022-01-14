@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: color.AppColor.colorLightCardColors,
       body: Container(
-        padding: const EdgeInsets.only(top: 70, left: 30, right: 30),
+        padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
         child: Column(
           children: [
             Row(
@@ -176,8 +176,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-
-            const SizedBox(width: 10,),
+            const SizedBox(height: 10,),
             Container(
               height: 180,
               width: MediaQuery.of(context).size.width,
@@ -185,6 +184,7 @@ class _HomePageState extends State<HomePage> {
                 children: [
                   Container(
                     width: MediaQuery.of(context).size.width,
+                    margin: const EdgeInsets.only(top: 20),
                     height: 120,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
@@ -192,7 +192,15 @@ class _HomePageState extends State<HomePage> {
                         image: AssetImage(
                           "assets/card.jpg"
                         ),
+                        fit: BoxFit.fill,
                       ),
+                      boxShadow: [
+                        BoxShadow(
+                          blurRadius: 10,
+                          offset: const Offset(-8, -10),
+                          color: color.AppColor.gradientSecond.withOpacity(0.3),
+                        ),
+                      ]
                     ),
                   ),
                 ],
