@@ -117,14 +117,14 @@ class _HomePageState extends State<HomePage> {
                     ),
                     SizedBox(height: 5),
                     Text(
-                      'Legs Toning',
+                      'Тренеровка ног',
                       style: TextStyle(
                         fontSize: 23,
                         color: color.AppColor.homePageContainerTextSmall,
                       ),
                     ),
                     Text(
-                      'and Glutes Workout',
+                      'и брюшного преса',
                       style: TextStyle(
                         fontSize: 23,
                         color: color.AppColor.homePageContainerTextSmall,
@@ -200,8 +200,28 @@ class _HomePageState extends State<HomePage> {
                           offset: const Offset(-8, -10),
                           color: color.AppColor.gradientSecond.withOpacity(0.3),
                         ),
+                        BoxShadow(
+                          blurRadius: 10,
+                          offset: const Offset(1, 5),
+                          color: color.AppColor.gradientSecond.withOpacity(0.2),
+                        ),
                       ]
                     ),
+                  ),
+                  Container(
+                    height: 200,
+                    width: 350,
+                    color: Colors.redAccent.withOpacity(0.2),
+                    // decoration: BoxDecoration(
+                    //   color: Colors.redAccent.withOpacity(0.2),
+                    //   borderRadius: BorderRadius.circular(20),
+                    //   image: const DecorationImage(
+                    //     image: AssetImage(
+                    //       "assets/figure.png"
+                    //     ),
+                    //     fit: BoxFit.fill,
+                    //   ),
+                    // ),
                   ),
                 ],
               ),
