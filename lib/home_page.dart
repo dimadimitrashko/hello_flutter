@@ -12,7 +12,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: color.AppColor.colorLightCardColors,
+      backgroundColor: color.AppColor.homePageContainerTextSmall,
       body: Container(
         padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
         child: Column(
@@ -210,19 +210,36 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Container(
                     height: 200,
-                    width: 350,
+                    width: MediaQuery.of(context).size.width,
+                    margin: const EdgeInsets.only(right: 200, bottom: 40),
                     color: Colors.redAccent.withOpacity(0.2),
-                    // decoration: BoxDecoration(
-                    //   color: Colors.redAccent.withOpacity(0.2),
-                    //   borderRadius: BorderRadius.circular(20),
-                    //   image: const DecorationImage(
-                    //     image: AssetImage(
-                    //       "assets/figure.png"
-                    //     ),
-                    //     fit: BoxFit.fill,
-                    //   ),
-                    // ),
                   ),
+                  Container(
+                    width: double.maxFinite,
+                    height: 100,
+                    color: Colors.redAccent.withOpacity(0.3),
+                    margin: const EdgeInsets.only(left: 130, top: 40 ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Вы отлично идете',
+                          style: TextStyle(
+                            fontSize:18,
+                            fontWeight: FontWeight.bold,
+                            color: color.AppColor.homePageDetail,
+                          ),
+                        ),
+                        SizedBox(height: 10,),
+                        RichText(text: TextSpan(
+                          text: "Так держать",
+                          style: TextStyle(
+                            color: color.AppColor.homePagePlanColor,
+                          )
+                        ))
+                         
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
