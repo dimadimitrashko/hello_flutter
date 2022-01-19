@@ -176,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(height: 5,),
             Container(
               height: 180,
               width: MediaQuery.of(context).size.width,
@@ -196,14 +196,14 @@ class _HomePageState extends State<HomePage> {
                       ),
                       boxShadow: [
                         BoxShadow(
-                          blurRadius: 10,
-                          offset: const Offset(-8, -10),
+                          blurRadius: 40,
+                          offset: const Offset(8, 10),
                           color: color.AppColor.gradientSecond.withOpacity(0.3),
                         ),
                         BoxShadow(
                           blurRadius: 10,
-                          offset: const Offset(1, 5),
-                          color: color.AppColor.gradientSecond.withOpacity(0.2),
+                          offset: const Offset(-1, -5),
+                          color: color.AppColor.gradientSecond.withOpacity(0.3),
                         ),
                       ]
                     ),
@@ -236,7 +236,7 @@ class _HomePageState extends State<HomePage> {
                             color: color.AppColor.homePagePlanColor,
                           )
                         ))
-                         
+
                       ],
                     ),
                   )
