@@ -187,7 +187,8 @@ class _HomePageState extends State<HomePage> {
                     margin: const EdgeInsets.only(top: 20),
                     height: 120,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                        // color: color.AppColor.gradientSecond.withOpacity(0.3),
+                        borderRadius: BorderRadius.circular(20),
                       image: const DecorationImage(
                         image: AssetImage(
                           "assets/card.jpg"
@@ -212,36 +213,63 @@ class _HomePageState extends State<HomePage> {
                     height: 200,
                     width: MediaQuery.of(context).size.width,
                     margin: const EdgeInsets.only(right: 200, bottom: 40),
-                    color: Colors.redAccent.withOpacity(0.2),
-                  ),
+                    decoration: BoxDecoration(
+                    // color: Colors.redAccent.withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(20),
+                      image: const DecorationImage(
+                        image: AssetImage(
+                          "assets/figure.png"
+                        )
+                      )
+                    ),
+                  ),//beauty girl
                   Container(
                     width: double.maxFinite,
                     height: 100,
-                    color: Colors.redAccent.withOpacity(0.3),
+                    // color: Colors.redAccent.withOpacity(0.3),
                     margin: const EdgeInsets.only(left: 130, top: 40 ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Вы отлично идете',
+                        const Text('Вы отлично идете',
                           style: TextStyle(
                             fontSize:18,
                             fontWeight: FontWeight.bold,
-                            color: color.AppColor.homePageDetail,
+                            color: color.AppColor.homePageDetail
                           ),
                         ),
-                        SizedBox(height: 10,),
-                        RichText(text: TextSpan(
-                          text: "Так держать",
+                        const SizedBox(height: 10,),
+                        RichText(text: const TextSpan(
+                          text: "Так держать\n",
                           style: TextStyle(
                             color: color.AppColor.homePagePlanColor,
-                          )
-                        ))
+                            fontSize:  16,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: "придерживайся своего плана",
+                            ),
+                          ]
+                        )),
 
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
+            ),
+            Row(
+              children: const [
+                Text(
+                  "Список упражнений",
+                  style: TextStyle(
+                  // textAlign: TextAlign.center,
+                  fontSize: 25,
+                  fontWeight: FontWeight.w500,
+                  color: color.AppColor.homePageTitle,
+                  ),
+                ),
+              ],
             ),
           ],
         ),

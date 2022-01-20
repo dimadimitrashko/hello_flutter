@@ -9,4 +9,5 @@ class AppColor {
   static const Color gradientSecond = Color(0xFF8696CD);
   static const Color homePageContainerTextSmall = Color(0xFFE5E5E5);
   static const Color homePagePlanColor = Color(0xFFA0B1C1);
+  static const Color homePageTitle = Color(0xFF050809);
 }
