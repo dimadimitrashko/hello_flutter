@@ -271,6 +271,44 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
+            Expanded(child: ListView.builder(
+              itemCount: 4,
+                itemBuilder: (_,i){
+                  return Row(
+                    children: [
+                      Container(
+                        width: 150,
+                         height: 150,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15),
+                          image: const DecorationImage(
+                            image: AssetImage(
+                              "assets/figure.png"
+                            ),
+                          ),
+                          boxShadow: [
+                            BoxShadow(
+                              blurRadius: 3,
+                              offset: const Offset(5,5),
+                              color: color.AppColor.gradientSecond.withOpacity(0.3),
+                            ),
+                            BoxShadow(
+                              blurRadius: 3,
+                              offset: const Offset(-5,-5),
+                              color: color.AppColor.gradientSecond.withOpacity(0.3),
+                            ),
+                          ]
+                        ),
+                        child: const Center(
+                          child: Text(
+                            "Талия"
+                          ),
+                        ),
+                      ),
+                    ],
+                  );
+                }))
           ],
         ),
       ),
