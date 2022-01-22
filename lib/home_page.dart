@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
 
   _initData() {
     DefaultAssetBundle.of(context).loadString("json/info.json").then((value) {
-      json.decode(value);
+      info = json.decode(value);
     });
   }
 
@@ -123,71 +123,71 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.only(left: 20, top: 18, right: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text(
+                  children: [
+                    const Text(
                       'Следущая тренеровка',
                       style: TextStyle(
                         fontSize: 15,
                         color: color.AppColor.homePageContainerTextSmall,
                       ),
                     ),
-                    SizedBox(height: 5),
-                    Text(
+                    const SizedBox(height: 5),
+                    const Text(
                       'Тренеровка ног',
                       style: TextStyle(
                         fontSize: 23,
                         color: color.AppColor.homePageContainerTextSmall,
                       ),
                     ),
-                    Text(
+                    const Text(
                       'и брюшного преса',
                       style: TextStyle(
                         fontSize: 23,
                         color: color.AppColor.homePageContainerTextSmall,
                       ),
                     ),
-                    SizedBox(height: 25),
-                    // Row(
-                    //   crossAxisAlignment: CrossAxisAlignment.end,
-                    //   children: [
-                    //     Row(
-                    //       children: const [
-                    //         Icon(
-                    //           Icons.timer,
-                    //           size: 20,
-                    //           color: color.AppColor.homePageContainerTextSmall,
-                    //         ),
-                    //         SizedBox(width: 10),
-                    //         Text(
-                    //           '60 мин',
-                    //           style: TextStyle(
-                    //             fontSize: 13,
-                    //             color:
-                    //             color.AppColor.homePageContainerTextSmall,
-                    //           ),
-                    //         ),
-                    //       ],
-                    //     ),
-                    //     Expanded(child: Container()),
-                    //     Container(
-                    //       decoration: BoxDecoration(
-                    //         borderRadius: BorderRadius.circular(60),
-                    //         boxShadow: const [
-                    //           BoxShadow(
-                    //             color: color.AppColor.gradientFirst,
-                    //             blurRadius: 10,
-                    //             offset: Offset(4,8),
-                    //           ),
-                    //         ],
-                    //       ),
-                    //       child: const Icon(
-                    //         Icons.play_circle_fill,
-                    //         color: Colors.white,
-                    //         size: 60,
-                    //       ),
-                    //     ),
-                    //   ],
-                    // ),
+                    const SizedBox(height: 25),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Row(
+                          children: const [
+                            Icon(
+                              Icons.timer,
+                              size: 20,
+                              color: color.AppColor.homePageContainerTextSmall,
+                            ),
+                            SizedBox(width: 10),
+                            Text(
+                              '60 мин',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color:
+                                    color.AppColor.homePageContainerTextSmall,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Expanded(child: Container()),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(60),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: color.AppColor.gradientFirst,
+                                blurRadius: 10,
+                                offset: Offset(4, 8),
+                              ),
+                            ],
+                          ),
+                          child: const Icon(
+                            Icons.play_circle_fill,
+                            color: Colors.white,
+                            size: 60,
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -195,7 +195,8 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(
               height: 5,
             ),
-            Container(
+            SizedBox(
+              // разве не контейнер должен быть?
               height: 180,
               width: MediaQuery.of(context).size.width,
               child: Stack(
@@ -287,18 +288,19 @@ class _HomePageState extends State<HomePage> {
             ),
             Expanded(
                 child: ListView.builder(
-                    itemCount: 4,
+                    itemCount: (info.length.toDouble()/2).toInt(),
                     itemBuilder: (_, i) {
                       return Row(
                         children: [
                           Container(
                             width: 150,
                             height: 150,
+                            padding: const EdgeInsets.only(bottom: 5),
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(15),
-                                image: const DecorationImage(
-                                  image: AssetImage("assets/figure.png"),
+                                image: DecorationImage(
+                                  image: AssetImage(info[i]['img']),
                                 ),
                                 boxShadow: [
                                   BoxShadow(
@@ -314,12 +316,49 @@ class _HomePageState extends State<HomePage> {
                                         .withOpacity(0.3),
                                   ),
                                 ]),
-                            child: const Center(
+                            child:  Center(
                               child: Align(
                                 alignment: Alignment.bottomCenter,
                                 child: Text(
-                                  "Талия",
-                                  style: TextStyle(
+                                  info [i]['title'],
+                                  style: const TextStyle(
+                                    fontSize: 20,
+                                    color: color.AppColor.homePageDetail,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: 150,
+                            height: 150,
+                            padding: const EdgeInsets.only(bottom: 5),
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(15),
+                                image: DecorationImage(
+                                  image: AssetImage(info[i]['img']),
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 3,
+                                    offset: const Offset(5, 5),
+                                    color: color.AppColor.gradientSecond
+                                        .withOpacity(0.3),
+                                  ),
+                                  BoxShadow(
+                                    blurRadius: 3,
+                                    offset: const Offset(-5, -5),
+                                    color: color.AppColor.gradientSecond
+                                        .withOpacity(0.3),
+                                  ),
+                                ]),
+                            child:  Center(
+                              child: Align(
+                                alignment: Alignment.bottomCenter,
+                                child: Text(
+                                  info [i]['title'],
+                                  style: const TextStyle(
                                     fontSize: 20,
                                     color: color.AppColor.homePageDetail,
                                   ),

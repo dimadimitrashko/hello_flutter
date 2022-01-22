@@ -64,6 +64,11 @@ flutter:
   assets:
   - assets/card.jpg
   - assets/figure.png
+  - assets/ex1.png
+  - assets/ex2.png
+  - assets/ex3.png
+  - assets/ex4.png
+  - json/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
