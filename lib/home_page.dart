@@ -30,7 +30,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: color.AppColor.homePageContainerTextSmall,
       body: Container(
-        padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
+        padding: const EdgeInsets.only(top: 35, left: 25, right: 25),
         child: Column(
           children: [
             Row(
@@ -60,9 +60,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 30,
-            ),
+            const SizedBox(height: 14),
             Row(
               children: [
                 const Text(
@@ -89,12 +87,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
+            const SizedBox(height: 18),
             Container(
               width: MediaQuery.of(context).size.width,
-              height: 200,
+              height: 175,
               decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -120,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               child: Container(
-                padding: const EdgeInsets.only(left: 20, top: 18, right: 20),
+                padding: const EdgeInsets.only(left: 15, top: 18, right: 15),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -131,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                         color: color.AppColor.homePageContainerTextSmall,
                       ),
                     ),
-                    const SizedBox(height: 5),
+                    const SizedBox(height: 3),
                     const Text(
                       'Тренеровка ног',
                       style: TextStyle(
@@ -146,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                         color: color.AppColor.homePageContainerTextSmall,
                       ),
                     ),
-                    const SizedBox(height: 25),
+                    const SizedBox(height: 10),
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
@@ -197,14 +193,14 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(
               // разве не контейнер должен быть?
-              height: 180,
+              height: 138,
               width: MediaQuery.of(context).size.width,
               child: Stack(
                 children: [
                   Container(
                     width: MediaQuery.of(context).size.width,
                     margin: const EdgeInsets.only(top: 20),
-                    height: 120,
+                    height: 105,
                     decoration: BoxDecoration(
                         // color: color.AppColor.gradientSecond.withOpacity(0.3),
                         borderRadius: BorderRadius.circular(20),
@@ -230,7 +226,7 @@ class _HomePageState extends State<HomePage> {
                   Container(
                     height: 200,
                     width: MediaQuery.of(context).size.width,
-                    margin: const EdgeInsets.only(right: 200, bottom: 40),
+                    margin: const EdgeInsets.only(right: 180, bottom: 20),
                     decoration: BoxDecoration(
                         // color: Colors.redAccent.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(20),
@@ -241,7 +237,7 @@ class _HomePageState extends State<HomePage> {
                     width: double.maxFinite,
                     height: 100,
                     // color: Colors.redAccent.withOpacity(0.3),
-                    margin: const EdgeInsets.only(left: 130, top: 40),
+                    margin: const EdgeInsets.only(left: 130, top: 30),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -252,9 +248,7 @@ class _HomePageState extends State<HomePage> {
                               fontWeight: FontWeight.bold,
                               color: color.AppColor.homePageDetail),
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
+                        const SizedBox(height: 5),
                         RichText(
                             text: const TextSpan(
                                 text: "Так держать\n",
@@ -278,7 +272,6 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   "Список упражнений",
                   style: TextStyle(
-                    // textAlign: TextAlign.center,
                     fontSize: 25,
                     fontWeight: FontWeight.w500,
                     color: color.AppColor.homePageTitle,
@@ -288,7 +281,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Expanded(
                 child: ListView.builder(
-                    itemCount: (info.length.toDouble()/2).toInt(),
+                    itemCount: info.length.toDouble() ~/ 2,
                     itemBuilder: (_, i) {
                       return Row(
                         children: [
@@ -316,11 +309,11 @@ class _HomePageState extends State<HomePage> {
                                         .withOpacity(0.3),
                                   ),
                                 ]),
-                            child:  Center(
+                            child: Center(
                               child: Align(
                                 alignment: Alignment.bottomCenter,
                                 child: Text(
-                                  info [i]['title'],
+                                  info[i]['title'],
                                   style: const TextStyle(
                                     fontSize: 20,
                                     color: color.AppColor.homePageDetail,
@@ -353,11 +346,11 @@ class _HomePageState extends State<HomePage> {
                                         .withOpacity(0.3),
                                   ),
                                 ]),
-                            child:  Center(
+                            child: Center(
                               child: Align(
                                 alignment: Alignment.bottomCenter,
                                 child: Text(
-                                  info [i]['title'],
+                                  info[i]['title'],
                                   style: const TextStyle(
                                     fontSize: 20,
                                     color: color.AppColor.homePageDetail,
