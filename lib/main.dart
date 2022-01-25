@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/video_info.dart';
 
-import 'home_page.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.green),
-      home: const HomePage(),
+      home: const VideoInfo(),
     );
   }
 }

@@ -280,16 +280,22 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             Expanded(
+                child: OverflowBox(
+              maxWidth: MediaQuery.of(context).size.width,
+              child: MediaQuery.removePadding(
+                removeTop: true,
+                context: context,
                 child: ListView.builder(
                     itemCount: info.length.toDouble() ~/ 2,
                     itemBuilder: (_, i) {
-                      int a = 2*i;
-                      int b = 2*i + 1;
+                      int a = 2 * i;
+                      int b = 2 * i + 1;
                       return Row(
                         children: [
                           Container(
-                            width: 150,
+                            width: (MediaQuery.of(context).size.width-70)/2,
                             height: 150,
+                            margin: const EdgeInsets.only(left:25,bottom: 5, top: 10),
                             padding: const EdgeInsets.only(bottom: 5),
                             decoration: BoxDecoration(
                                 color: Colors.white,
@@ -325,8 +331,9 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           Container(
-                            width: 150,
+                            width: (MediaQuery.of(context).size.width-70)/2,
                             height: 150,
+                            margin: const EdgeInsets.only(left:25,bottom: 5, top: 10),
                             padding: const EdgeInsets.only(bottom: 5),
                             decoration: BoxDecoration(
                                 color: Colors.white,
@@ -363,7 +370,9 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       );
-                    }))
+                    }),
+              ),
+            ))
           ],
         ),
       ),
