@@ -283,6 +283,8 @@ class _HomePageState extends State<HomePage> {
                 child: ListView.builder(
                     itemCount: info.length.toDouble() ~/ 2,
                     itemBuilder: (_, i) {
+                      int a = 2*i;
+                      int b = 2*i + 1;
                       return Row(
                         children: [
                           Container(
@@ -293,7 +295,7 @@ class _HomePageState extends State<HomePage> {
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(15),
                                 image: DecorationImage(
-                                  image: AssetImage(info[i]['img']),
+                                  image: AssetImage(info[a]['img']),
                                 ),
                                 boxShadow: [
                                   BoxShadow(
@@ -313,7 +315,7 @@ class _HomePageState extends State<HomePage> {
                               child: Align(
                                 alignment: Alignment.bottomCenter,
                                 child: Text(
-                                  info[i]['title'],
+                                  info[a]['title'],
                                   style: const TextStyle(
                                     fontSize: 20,
                                     color: color.AppColor.homePageDetail,
@@ -330,7 +332,7 @@ class _HomePageState extends State<HomePage> {
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(15),
                                 image: DecorationImage(
-                                  image: AssetImage(info[i]['img']),
+                                  image: AssetImage(info[b]['img']),
                                 ),
                                 boxShadow: [
                                   BoxShadow(
@@ -350,7 +352,7 @@ class _HomePageState extends State<HomePage> {
                               child: Align(
                                 alignment: Alignment.bottomCenter,
                                 child: Text(
-                                  info[i]['title'],
+                                  info[b]['title'],
                                   style: const TextStyle(
                                     fontSize: 20,
                                     color: color.AppColor.homePageDetail,

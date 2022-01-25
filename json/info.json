@@ -1,15 +1,15 @@
 [
   {
+    "img": "assets/ex3.png",
+    "title": "Бицепс"
+  },
+  {
     "img": "assets/ex1.png",
     "title": "Грудь"
   },
   {
     "img": "assets/ex2.png",
     "title": "Пресс"
-  },
-  {
-    "img": "assets/ex3.png",
-    "title": "Бицепс"
   },
   {
     "img": "assets/ex4.png",
