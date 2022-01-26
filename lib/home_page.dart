@@ -1,6 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:hello_flutter/video_info.dart';
 import 'colors.dart' as color;
 
 class HomePage extends StatefulWidget {
@@ -12,7 +15,6 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List info = [];
-
   _initData() {
     DefaultAssetBundle.of(context).loadString("json/info.json").then((value) {
       info = json.decode(value);
@@ -80,10 +82,14 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 const SizedBox(width: 5),
-                const Icon(
-                  Icons.arrow_forward,
-                  size: 20,
-                  color: color.AppColor.homePageIcons,
+                 InkWell(
+                  onTap: (){
+                    Get.to(()=>const VideoInfo());
+                  },
+                  child: const Icon(Icons.arrow_forward,
+                    size: 20,
+                    color: color.AppColor.homePageIcons,
+                  ),
                 ),
               ],
             ),
