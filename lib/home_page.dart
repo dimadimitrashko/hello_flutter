@@ -82,11 +82,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 const SizedBox(width: 5),
-                 InkWell(
-                  onTap: (){
-                    Get.to(()=>const VideoInfo());
+                InkWell(
+                  onTap: () {
+                    Get.to(() => const VideoInfo());
                   },
-                  child: const Icon(Icons.arrow_forward,
+                  child: const Icon(
+                    Icons.arrow_forward,
                     size: 20,
                     color: color.AppColor.homePageIcons,
                   ),
@@ -237,7 +238,7 @@ class _HomePageState extends State<HomePage> {
                         // color: Colors.redAccent.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(20),
                         image: const DecorationImage(
-                            image: AssetImage("assets/figure.png"))),
+                            image: AssetImage('assets/figure.png'))),
                   ), //beauty girl
                   Container(
                     width: double.maxFinite,
@@ -299,9 +300,10 @@ class _HomePageState extends State<HomePage> {
                       return Row(
                         children: [
                           Container(
-                            width: (MediaQuery.of(context).size.width-70)/2,
+                            width: (MediaQuery.of(context).size.width - 70) / 2,
                             height: 150,
-                            margin: const EdgeInsets.only(left:25,bottom: 5, top: 10),
+                            margin: const EdgeInsets.only(
+                                left: 25, bottom: 5, top: 10),
                             padding: const EdgeInsets.only(bottom: 5),
                             decoration: BoxDecoration(
                                 color: Colors.white,
@@ -337,9 +339,10 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           Container(
-                            width: (MediaQuery.of(context).size.width-70)/2,
+                            width: (MediaQuery.of(context).size.width - 70) / 2,
                             height: 150,
-                            margin: const EdgeInsets.only(left:25,bottom: 5, top: 10),
+                            margin: const EdgeInsets.only(
+                                left: 25, bottom: 5, top: 10),
                             padding: const EdgeInsets.only(bottom: 5),
                             decoration: BoxDecoration(
                                 color: Colors.white,

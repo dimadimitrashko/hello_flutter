@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hello_flutter/video_info.dart';
 import 'package:get/get.dart';
 
 import 'home_page.dart';
