@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage> {
                     offset: Offset(5, 10),
                     blurRadius: 20,
                     color: color.AppColor
-                        .gradientSecond, //.withOpacity(0.2),//??????????
+                        .gradientSecond, //.withOpacity(0.2),
                   ),
                 ],
               ),
@@ -199,7 +199,6 @@ class _HomePageState extends State<HomePage> {
               height: 5,
             ),
             SizedBox(
-              // разве не контейнер должен быть?
               height: 138,
               width: MediaQuery.of(context).size.width,
               child: Stack(
@@ -209,7 +208,6 @@ class _HomePageState extends State<HomePage> {
                     margin: const EdgeInsets.only(top: 20),
                     height: 105,
                     decoration: BoxDecoration(
-                        // color: color.AppColor.gradientSecond.withOpacity(0.3),
                         borderRadius: BorderRadius.circular(20),
                         image: const DecorationImage(
                           image: AssetImage("assets/card.jpg"),
